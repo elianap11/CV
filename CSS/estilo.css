@@ -106,8 +106,6 @@ img {
     text-align: center;
 }
 
-
-
 /* Estudios Cursados con flexbox*/
 
 .contenedor {
@@ -121,7 +119,7 @@ img {
 }
 
 .cuadro {
-    /*display: flex;*/
+    display: flex;
     font-size: 1.1em;
     align-items: center;
     font-family: 'Abel', sans-serif;
@@ -131,15 +129,25 @@ img {
     height: auto;
     margin: 2px;
     padding: 8px;
-
 }
 
 @media screen and (max-width: 600px) {
     .contenedor {
-        width: 850px;
-        flex-direction: column;
+        display: contents;      
+    }   
+
+    .cuadro {
+        padding-right: 190px;
     }
+
+    a {
+        padding: 12px;
+        text-align: center;
+        margin: 12px;
+    }
+
 }
+
 
 /* Experiencia*/
 
@@ -188,7 +196,7 @@ textarea {
     font-family: 'Abel', sans-serif;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
 
     form {
         width: 230px; 
