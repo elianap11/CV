@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./CSS/estilo.css">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Lobster|Roboto" rel="stylesheet"> 
+    <title>Datos personales</title>
+</head>
+<body>
+      
+
+    <h1>Datos Personales</h1>
+    <br>
+    <img src="IMG/fotoCV.png" width="120" height="120">
+    <h2>Eliana Paniagua</h2>
+    <h3>Periodista - Productora - Desarrolladora Web Full Stack.</h3>
+    <br>
+
+    <div class="detalles">
+    <p>Edad: 39.</p>
+    <p>Nacionalidad: Argentina.</p>
+    <p>Domicilio: Buenos Aires.</p>
+    <p>E-mail: elianaprensa@gmail.com </p>
+
+    <h4> <a href="https://github.com/elianap11" target="_blank">GitHub</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://60lineas.wordpress.com" target="_blank">Wordpress</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href = "https://nuestrospoliciales.blogspot.com" target="_blank">Blogger</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://medium.com/@contradictoria" target="_blank">Medium</a>
+    </h4>
+    </div>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Datos.html">Datos personales</a></li>
+            <li><a href="Experiencia.html">Experiencia Laboral</a></li>
+            <li><a href="Estudios.html">Estudios Cursados</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <script>
+        const triggers = document.querySelectorAll('a');
+        const highlight = document.createElement('span');
+        highlight.classList.add('highlight');
+        document.body.appendChild(highlight);
+        
+        function highlightLink() {
+            const linkCoords = this.getBoundingClientRect();
+            console.log(linkCoords);
+            const coords = {
+                width: linkCoords.width,
+                height: linkCoords.height,
+                top: linkCoords.top + window.scrollY,
+                left: linkCoords.left + window.scrollX
+                };
+                    
+                highlight.style.width = `${coords.width}px`;
+                highlight.style.height = `${coords.height}px`;
+                highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`;
+                }
+                triggers.forEach(a => a.addEventListener('mouseenter', highlightLink));
+    </script>
+   
+</body>
+</html>

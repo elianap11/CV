@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="./CSS/estilo.css">
+        <link href="https://fonts.googleapis.com/css?family=Abel|Lobster|Roboto" rel="stylesheet">     
+        <title>Experiencia Laboral</title>
+    </head>
+    <body>
+        
+        <h1>Experiencia Laboral</h1>
+        
+        <ul>
+            <li class="trabajo">2013-2017. <a href="https://60lineas.wordpress.com/" target="_blank">60 Líneas</a>, Casos Criminales. Web de Periodismo Policial de Análisis Y Conducta Criminal.</li> <!-- linkear todo a la web-->
+            <li class="trabajo">2011-2013. <a href="https://www.clarin.com/tema/diario-muy.html" target="_blank">Diario Muy (Grupo Clarín)</a>. Redactora De La Sección Actualidad (Policiales, Judiciales).</li>
+            <li class="trabajo">2008-2009. <a href="http://www.rkfm.com.ar/" target="_blank">FM RK (91.5)</a>, Quilmes. Programa Periodístico “El Resumen”. Co-Conducción Y Producción Periodística.</li>
+            <li class="trabajo">2007. <a href="http://berazategui.gov.ar/" target="_blank">Secretaría De Ceremonial Y Prensa, Municipalidad De Berazategui</a>. Entrevistas, Gacetillas.</li>
+            <li class="trabajo">2006. <a href="http://perspectivasur.com" target="_blank">Diario Perspectiva Sur</a>, Quilmes. Judiciales Y Policiales. Actualización Diaria En La Web.</li>
+            <li class="trabajo">2005-2007. Conste En Actas. Información Judicial Y Policial De La Zona Sur Del Gran Buenos Aires.</li>
+            <li class="trabajo"> 2005-2006. <a href="http://www.rkfm.com.ar/" target="_blank">FM RK (91.5)</a>, Quilmes. Coordinación Y Producción Periodística. Producción De Móvil, Flash De Noticias Y Edición De Audio.</li>
+            <li class="trabajo">2004. Programa “Edición Extra”, <a href="https://www.americatv.com.ar/" target="_blank">América TV</a>. Producción De Notas De Actualidad, Policiales.</li>
+            <li class="trabajo">2003. Programa Diario “INFORME Central”, <a href="https://www.americatv.com.ar/" target="_blank">América TV</a>. Producción De Notas De Actualidad, Investigaciones.</li>
+            <li class="trabajo">2002-2005. Semanario El Suburbano, Quilmes. Judiciales, Investigaciones Especiales, Política, Sociedad.</li>
+            <li class="trabajo">2000-2001. <a href="http://elsolnoticias.com.ar/" target="_blank">Diario El Sol</a>, Quilmes. Judiciales, Policiales, Informes Especiales.</li>
+        </ul>
+
+    <nav>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Datos.html">Datos personales</a></li>
+                <li><a href="Experiencia.html">Experiencia Laboral</a></li>
+                <li><a href="Estudios.html">Estudios Cursados</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    
+        <script>
+            const triggers = document.querySelectorAll('a');
+            const highlight = document.createElement('span');
+            highlight.classList.add('highlight');
+            document.body.appendChild(highlight);
+            
+            function highlightLink() {
+                const linkCoords = this.getBoundingClientRect();
+                console.log(linkCoords);
+                const coords = {
+                    width: linkCoords.width,
+                    height: linkCoords.height,
+                    top: linkCoords.top + window.scrollY,
+                    left: linkCoords.left + window.scrollX
+                    };
+                    
+                    highlight.style.width = `${coords.width}px`;
+                    highlight.style.height = `${coords.height}px`;
+                    highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`;
+                    }
+                    triggers.forEach(a => a.addEventListener('mouseenter', highlightLink));
+        </script>
+        
+   
+</body>
+</html>
+
+
