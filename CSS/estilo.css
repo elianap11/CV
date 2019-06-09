@@ -22,8 +22,9 @@ p {
 }
 
 h4 {
-    font-family: 'Lobster', cursive;
     color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
 }
 
 @media screen and (max-width: 600px) {
@@ -33,6 +34,11 @@ h4 {
         margin: 20px;
     }
 
+    h4 {
+        display: flex;
+        flex-direction: row;
+        font-size: 15px;
+    }
 }
 
 
@@ -81,6 +87,7 @@ a:hover {
         flex-direction: column;
         align-content: center;
     }
+    
 }
 
   
@@ -91,6 +98,7 @@ a:hover {
     color:black;
     font-family: 'Roboto', sans-serif;
 }
+
 
 /* Datos personales*/
 
@@ -141,7 +149,6 @@ img {
     }
 
     a {
-        padding: 12px;
         text-align: center;
         margin: 12px;
     }
@@ -153,6 +160,12 @@ img {
 
 .trabajo {
     font-family: 'Abel', sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+    .trabajo {
+        font-size: 18px;
+    }
 }
 
 
