@@ -1,38 +1,36 @@
 body {
-    font-family: 'Lobster', cursive;
     color: white;
+    text-shadow: 8px 8px 8px black;
+    font-family: 'Lobster', cursive;
     background-position: center center; /*Imagen de fondo centrada vertical y horizontal*/
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: white;
     
 }
    
 .item1 {
-    font-size: 25px;
+    font-size: 35px;
+    
 }
 
 .item2 {
-       font-size: 23px;
+       font-size: 33px;
 }
 
 .item3 {
     
-    font-size: 23px;
+    font-size: 33px;
 }
 
 .item5 {
-    margin-top: -245px;
-}
-
-.item6 {
-    margin-top: 220px;
+    margin-top: -350px;
+    font-size: 20px;
 }
 
 a {
     text-decoration: none;
-    color: #000;
+    color: #FFF;
 }
 
 a:hover {
