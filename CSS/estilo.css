@@ -5,11 +5,18 @@ body {
 }
 
 
-h1, h2, h3 {
+h1 {
     font-family: 'Lobster', cursive;
     color: #f4f3f3;
     text-shadow: 5px 5px 5px black;
     margin: 30px;
+}
+
+h2, h3 {
+    font-family: 'Abel', sans-serif;
+    color: #151515;
+    margin: 30px;
+
 }
 
 p {
